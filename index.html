@@ -1,594 +1,725 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy – Cardtastic</title>
-  <meta name="description" content="Privacy Policy for Cardtastic – the vocabulary learning app with AI-powered flashcards and spaced repetition." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --primary: #4A7C6F;
-      --primary-light: #5E9E8F;
-      --primary-glow: rgba(74, 124, 111, 0.25);
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy – Cardtastic</title>
+    <meta
+      name="description"
+      content="Privacy Policy for Cardtastic – the vocabulary learning app with AI-powered flashcards and spaced repetition."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #4a7c6f;
+        --primary-light: #5e9e8f;
+        --primary-glow: rgba(74, 124, 111, 0.25);
 
-      --bg: #0f1a18;
-      --bg-card: #162320;
-      --bg-card-hover: #1c2e2a;
-      --border: rgba(74, 124, 111, 0.2);
-      --text: #e8f0ee;
-      --text-muted: #8aa89f;
-      --text-heading: #ffffff;
-      --table-stripe: rgba(74, 124, 111, 0.08);
-    }
-
-    [data-theme="light"] {
-      --bg: #f4f9f7;
-      --bg-card: #ffffff;
-      --bg-card-hover: #f0f7f5;
-      --border: rgba(74, 124, 111, 0.2);
-      --text: #1a2e2a;
-      --text-muted: #557a71;
-      --text-heading: #0d1f1c;
-      --table-stripe: rgba(74, 124, 111, 0.06);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    /* ── Header ── */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(15, 26, 24, 0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-      padding: 0 24px;
-      transition: background 0.3s;
-    }
-
-    [data-theme="light"] header {
-      background: rgba(244, 249, 247, 0.85);
-    }
-
-    .header-inner {
-      max-width: 780px;
-      margin: 0 auto;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
-    .logo-icon {
-      width: 36px;
-      height: 36px;
-      background: linear-gradient(135deg, var(--primary), var(--primary-light));
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-      box-shadow: 0 4px 16px var(--primary-glow);
-    }
-
-    .logo-name {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--text-heading);
-      letter-spacing: -0.3px;
-    }
-
-    .theme-toggle {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 50px;
-      padding: 6px 14px;
-      cursor: pointer;
-      font-size: 13px;
-      color: var(--text-muted);
-      font-family: inherit;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: all 0.2s ease;
-    }
-
-    .theme-toggle:hover {
-      border-color: var(--primary);
-      color: var(--primary-light);
-    }
-
-    /* ── Hero ── */
-    .hero {
-      padding: 72px 24px 48px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 600px;
-      height: 400px;
-      background: radial-gradient(ellipse, var(--primary-glow) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 50px;
-      padding: 5px 14px;
-      font-size: 12px;
-      font-weight: 500;
-      color: var(--primary-light);
-      margin-bottom: 20px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      font-size: clamp(28px, 5vw, 44px);
-      font-weight: 700;
-      color: var(--text-heading);
-      letter-spacing: -1px;
-      margin-bottom: 12px;
-      line-height: 1.15;
-    }
-
-    .hero h1 span {
-      background: linear-gradient(135deg, var(--primary-light), #8ecfc4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero-date {
-      font-size: 14px;
-      color: var(--text-muted);
-    }
-
-    /* ── Main content ── */
-    main {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 0 24px 80px;
-    }
-
-    /* ── Privacy card ── */
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px 32px;
-      margin-bottom: 16px;
-      transition: background 0.2s ease, border-color 0.2s ease;
-    }
-
-    .card:hover {
-      background: var(--bg-card-hover);
-      border-color: rgba(74, 124, 111, 0.35);
-    }
-
-    .card-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .card-icon {
-      width: 38px;
-      height: 38px;
-      min-width: 38px;
-      background: linear-gradient(135deg, var(--primary-glow), transparent);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 18px;
-    }
-
-    .card h2 {
-      font-size: 17px;
-      font-weight: 600;
-      color: var(--text-heading);
-      letter-spacing: -0.3px;
-    }
-
-    .card h3 {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--primary-light);
-      margin: 20px 0 8px;
-    }
-
-    .card p {
-      font-size: 15px;
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-
-    .card p:last-child {
-      margin-bottom: 0;
-    }
-
-    .card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .card ul li {
-      font-size: 15px;
-      color: var(--text);
-      padding: 5px 0 5px 20px;
-      position: relative;
-    }
-
-    .card ul li::before {
-      content: '›';
-      position: absolute;
-      left: 4px;
-      color: var(--primary-light);
-      font-weight: 700;
-    }
-
-    /* ── Highlight box ── */
-    .highlight {
-      background: linear-gradient(135deg, rgba(74, 124, 111, 0.12), rgba(74, 124, 111, 0.06));
-      border: 1px solid rgba(74, 124, 111, 0.3);
-      border-left: 3px solid var(--primary);
-      border-radius: 10px;
-      padding: 14px 18px;
-      margin: 12px 0;
-      font-size: 14px;
-      color: var(--text);
-    }
-
-    .highlight strong {
-      color: var(--primary-light);
-    }
-
-    /* ── Table ── */
-    .table-wrap {
-      overflow-x: auto;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      margin-top: 12px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 14px;
-    }
-
-    thead th {
-      background: rgba(74, 124, 111, 0.15);
-      color: var(--primary-light);
-      font-weight: 600;
-      padding: 10px 14px;
-      text-align: left;
-      white-space: nowrap;
-    }
-
-    tbody td {
-      padding: 10px 14px;
-      color: var(--text);
-      border-top: 1px solid var(--border);
-    }
-
-    tbody tr:nth-child(even) td {
-      background: var(--table-stripe);
-    }
-
-    .badge-yes {
-      display: inline-block;
-      background: rgba(74, 124, 111, 0.2);
-      color: var(--primary-light);
-      border-radius: 50px;
-      padding: 2px 10px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    /* ── Links ── */
-    a {
-      color: var(--primary-light);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(94, 158, 143, 0.3);
-      transition: border-color 0.2s;
-    }
-
-    a:hover {
-      border-bottom-color: var(--primary-light);
-    }
-
-    /* ── Footer ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 24px;
-      text-align: center;
-    }
-
-    .footer-inner {
-      max-width: 780px;
-      margin: 0 auto;
-    }
-
-    footer p {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-
-    footer strong {
-      color: var(--text);
-    }
-
-    /* ── Animations ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .card {
-      animation: fadeUp 0.4s ease both;
-    }
-
-    .card:nth-child(1)  { animation-delay: 0.05s; }
-    .card:nth-child(2)  { animation-delay: 0.10s; }
-    .card:nth-child(3)  { animation-delay: 0.15s; }
-    .card:nth-child(4)  { animation-delay: 0.20s; }
-    .card:nth-child(5)  { animation-delay: 0.25s; }
-    .card:nth-child(6)  { animation-delay: 0.30s; }
-    .card:nth-child(7)  { animation-delay: 0.35s; }
-    .card:nth-child(8)  { animation-delay: 0.40s; }
-    .card:nth-child(9)  { animation-delay: 0.45s; }
-
-    @media (max-width: 600px) {
-      .card { padding: 20px 18px; }
-      .hero { padding: 56px 20px 36px; }
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="header-inner">
-      <a href="#" class="logo">
-        <div class="logo-icon">🃏</div>
-        <span class="logo-name">Cardtastic</span>
-      </a>
-      <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle theme">
-        <span id="themeIcon">☀️</span>
-        <span id="themeLabel">Light</span>
-      </button>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="hero-badge">📄 Legal</div>
-    <h1>Privacy <span>Policy</span></h1>
-    <p class="hero-date">Last updated: August 11, 2026</p>
-  </section>
-
-  <main>
-
-    <!-- Intro card -->
-    <div class="card">
-      <div class="card-header">
-        <h2>Introduction</h2>
-      </div>
-      <p>Welcome to <strong>Cardtastic</strong>, a vocabulary learning app developed by <strong>Maximilian Plantz / Soposy</strong>. This Privacy Policy explains how we handle your data.</p>
-      <div class="highlight">
-        <strong>Privacy-first by design:</strong> Cardtastic stores all your data locally on your device. We have no servers, no user accounts, and no tracking. The vast majority of your data never leaves your device.
-      </div>
-    </div>
-
-    <!-- Local data -->
-    <div class="card">
-      <div class="card-header">
-        <h2>Data Stored on Your Device</h2>
-      </div>
-      <p>All of the following data is created by you and stored <strong>exclusively on your device</strong> in a local database:</p>
-      <ul>
-        <li>Vocabulary cards (words, translations, example sentences)</li>
-        <li>Flashcard decks and their language settings</li>
-        <li>Learning progress and statistics (phases, streaks, review dates)</li>
-        <li>Custom chat scenarios and AI conversation history</li>
-        <li>App preferences (language, theme, notification settings)</li>
-      </ul>
-      <div class="highlight">
-        <strong>We have no access to this data.</strong> It is never transmitted to our servers.
-      </div>
-    </div>
-
-    <!-- Cloud sync -->
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon">☁️</div>
-        <h2>Optional Cloud Sync</h2>
-      </div>
-      <p>If you choose to enable cloud backup, your local database file can be synced to a third-party provider of your choice:</p>
-      <ul>
-        <li><strong>Google Drive</strong> – <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
-        <li><strong>Microsoft OneDrive</strong> – <a href="https://privacy.microsoft.com" target="_blank" rel="noopener">Microsoft Privacy Policy</a></li>
-        <li><strong>WebDAV</strong> – your own server</li>
-      </ul>
-      <p>We do not act as an intermediary and have no access to your synced data. Authentication tokens for cloud services are stored securely in the iOS Keychain on your device and are never shared with us.</p>
-    </div>
-
-    <!-- Permissions -->
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon">🔐</div>
-        <h2>Device Permissions</h2>
-      </div>
-      <p>The app may request the following permissions. All are optional.</p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Permission</th>
-              <th>Purpose</th>
-              <th>Optional?</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>🎙️ Microphone</td>
-              <td>Voice input for AI conversation mode</td>
-              <td><span class="badge-yes">Yes</span></td>
-            </tr>
-            <tr>
-              <td>🗣️ Speech Recognition</td>
-              <td>Transcribing spoken answers in chat</td>
-              <td><span class="badge-yes">Yes</span></td>
-            </tr>
-            <tr>
-              <td>📷 Camera</td>
-              <td>Scanning text from books via OCR</td>
-              <td><span class="badge-yes">Yes</span></td>
-            </tr>
-            <tr>
-              <td>🖼️ Photo Library</td>
-              <td>Importing images for text recognition</td>
-              <td><span class="badge-yes">Yes</span></td>
-            </tr>
-            <tr>
-              <td>🔔 Notifications</td>
-              <td>Learning reminders and streak alerts</td>
-              <td><span class="badge-yes">Yes</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="margin-top: 12px; font-size: 14px; color: var(--text-muted);">You can revoke any permission at any time in iOS Settings. Denying a permission only disables that specific feature.</p>
-    </div>
-
-    <!-- AI -->
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon">🤖</div>
-        <h2>On-Device AI</h2>
-      </div>
-      <p>Cardtastic offers an optional AI feature powered by an open-source language model (Gemma 2B) that runs <strong>entirely on your device</strong>.</p>
-      <ul>
-        <li>No data is sent to external AI services or the cloud.</li>
-        <li>All translations, suggestions, and AI conversations are processed locally.</li>
-        <li>The AI model (~1.2 GB) is downloaded directly to your device and stored locally.</li>
-      </ul>
-    </div>
-
-    <!-- No tracking -->
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon">🚫</div>
-        <h2>What We Do NOT Collect</h2>
-      </div>
-      <ul>
-        <li>Personal identification information (name, email, address)</li>
-        <li>Device identifiers or advertising IDs (IDFA)</li>
-        <li>Usage analytics, session data, or crash reports</li>
-        <li>Location data</li>
-        <li>Any data through third-party analytics or tracking SDKs</li>
-      </ul>
-    </div>
-
-    <!-- Deletion -->
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon">🗑️</div>
-        <h2>Data Deletion</h2>
-      </div>
-      <p>You are in full control of your data. You can delete it at any time by:</p>
-      <ul>
-        <li>Removing individual cards or decks within the app</li>
-        <li>Using "Delete All Data" in the app's settings</li>
-        <li>Uninstalling the app (removes all local data immediately)</li>
-      </ul>
-      <p>If you used cloud sync, please also delete the backup file directly from your cloud storage provider.</p>
-    </div>
-
-    <!-- Children -->
-    <div class="card">
-      <div class="card-header">
-        <div class="card-icon">👶</div>
-        <h2>Children's Privacy</h2>
-      </div>
-      <p>Cardtastic does not knowingly collect personal information from children under 13. The app does not require account creation or submission of any personal data. If you are a parent or guardian with concerns, please contact us.</p>
-    </div>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <p>Cardtastic · Bundle ID: com.soposy.cardtastic</p>
-    </div>
-  </footer>
-
-  <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const isDark = html.getAttribute('data-theme') === 'dark';
-      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-      document.getElementById('themeIcon').textContent = isDark ? '🌙' : '☀️';
-      document.getElementById('themeLabel').textContent = isDark ? 'Dark' : 'Light';
-      localStorage.setItem('ct-theme', isDark ? 'light' : 'dark');
-    }
-
-    // Restore saved theme
-    const saved = localStorage.getItem('ct-theme');
-    if (saved) {
-      document.documentElement.setAttribute('data-theme', saved);
-      if (saved === 'light') {
-        document.getElementById('themeIcon').textContent = '🌙';
-        document.getElementById('themeLabel').textContent = 'Dark';
+        --bg: #0f1a18;
+        --bg-card: #162320;
+        --bg-card-hover: #1c2e2a;
+        --border: rgba(74, 124, 111, 0.2);
+        --text: #e8f0ee;
+        --text-muted: #8aa89f;
+        --text-heading: #ffffff;
+        --table-stripe: rgba(74, 124, 111, 0.08);
       }
-    }
 
-    // Auto detect system theme on first visit
-    if (!saved && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      document.documentElement.setAttribute('data-theme', 'light');
-      document.getElementById('themeIcon').textContent = '🌙';
-      document.getElementById('themeLabel').textContent = 'Dark';
-    }
-  </script>
+      [data-theme="light"] {
+        --bg: #f4f9f7;
+        --bg-card: #ffffff;
+        --bg-card-hover: #f0f7f5;
+        --border: rgba(74, 124, 111, 0.2);
+        --text: #1a2e2a;
+        --text-muted: #557a71;
+        --text-heading: #0d1f1c;
+        --table-stripe: rgba(74, 124, 111, 0.06);
+      }
 
-</body>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+        transition:
+          background-color 0.3s ease,
+          color 0.3s ease;
+      }
+
+      /* ── Header ── */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(15, 26, 24, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border);
+        padding: 0 24px;
+        transition: background 0.3s;
+      }
+
+      [data-theme="light"] header {
+        background: rgba(244, 249, 247, 0.85);
+      }
+
+      .header-inner {
+        max-width: 780px;
+        margin: 0 auto;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .logo-icon {
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 700;
+        color: #fff;
+        box-shadow: 0 4px 16px var(--primary-glow);
+      }
+
+      .logo-name {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--text-heading);
+        letter-spacing: -0.3px;
+      }
+
+      .theme-toggle {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 50px;
+        padding: 6px 14px;
+        cursor: pointer;
+        font-size: 13px;
+        color: var(--text-muted);
+        font-family: inherit;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.2s ease;
+      }
+
+      .theme-toggle:hover {
+        border-color: var(--primary);
+        color: var(--primary-light);
+      }
+
+      /* ── Hero ── */
+      .hero {
+        padding: 72px 24px 48px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 600px;
+        height: 400px;
+        background: radial-gradient(
+          ellipse,
+          var(--primary-glow) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 50px;
+        padding: 5px 14px;
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--primary-light);
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        font-size: clamp(28px, 5vw, 44px);
+        font-weight: 700;
+        color: var(--text-heading);
+        letter-spacing: -1px;
+        margin-bottom: 12px;
+        line-height: 1.15;
+      }
+
+      .hero h1 span {
+        background: linear-gradient(135deg, var(--primary-light), #8ecfc4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero-date {
+        font-size: 14px;
+        color: var(--text-muted);
+      }
+
+      /* ── Main content ── */
+      main {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 0 24px 80px;
+      }
+
+      /* ── Privacy card ── */
+      .card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 28px 32px;
+        margin-bottom: 16px;
+        transition:
+          background 0.2s ease,
+          border-color 0.2s ease;
+      }
+
+      .card:hover {
+        background: var(--bg-card-hover);
+        border-color: rgba(74, 124, 111, 0.35);
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      . {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        background: linear-gradient(135deg, var(--primary-glow), transparent);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+
+      .card h2 {
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--text-heading);
+        letter-spacing: -0.3px;
+      }
+
+      .card h3 {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--primary-light);
+        margin: 20px 0 8px;
+      }
+
+      .card p {
+        font-size: 15px;
+        color: var(--text);
+        margin-bottom: 12px;
+      }
+
+      .card p:last-child {
+        margin-bottom: 0;
+      }
+
+      .card ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .card ul li {
+        font-size: 15px;
+        color: var(--text);
+        padding: 5px 0 5px 20px;
+        position: relative;
+      }
+
+      .card ul li::before {
+        content: "›";
+        position: absolute;
+        left: 4px;
+        color: var(--primary-light);
+        font-weight: 700;
+      }
+
+      /* ── Highlight box ── */
+      .highlight {
+        background: linear-gradient(
+          135deg,
+          rgba(74, 124, 111, 0.12),
+          rgba(74, 124, 111, 0.06)
+        );
+        border: 1px solid rgba(74, 124, 111, 0.3);
+        border-left: 3px solid var(--primary);
+        border-radius: 10px;
+        padding: 14px 18px;
+        margin: 12px 0;
+        font-size: 14px;
+        color: var(--text);
+      }
+
+      .highlight strong {
+        color: var(--primary-light);
+      }
+
+      /* ── Table ── */
+      .table-wrap {
+        overflow-x: auto;
+        border-radius: 10px;
+        border: 1px solid var(--border);
+        margin-top: 12px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      thead th {
+        background: rgba(74, 124, 111, 0.15);
+        color: var(--primary-light);
+        font-weight: 600;
+        padding: 10px 14px;
+        text-align: left;
+        white-space: nowrap;
+      }
+
+      tbody td {
+        padding: 10px 14px;
+        color: var(--text);
+        border-top: 1px solid var(--border);
+      }
+
+      tbody tr:nth-child(even) td {
+        background: var(--table-stripe);
+      }
+
+      .badge-yes {
+        display: inline-block;
+        background: rgba(74, 124, 111, 0.2);
+        color: var(--primary-light);
+        border-radius: 50px;
+        padding: 2px 10px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      /* ── Links ── */
+      a {
+        color: var(--primary-light);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(94, 158, 143, 0.3);
+        transition: border-color 0.2s;
+      }
+
+      a:hover {
+        border-bottom-color: var(--primary-light);
+      }
+
+      /* ── Footer ── */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 32px 24px;
+        text-align: center;
+      }
+
+      .footer-inner {
+        max-width: 780px;
+        margin: 0 auto;
+      }
+
+      footer p {
+        font-size: 13px;
+        color: var(--text-muted);
+        margin-bottom: 4px;
+      }
+
+      footer strong {
+        color: var(--text);
+      }
+
+      /* ── Animations ── */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .card {
+        animation: fadeUp 0.4s ease both;
+      }
+
+      .card:nth-child(1) {
+        animation-delay: 0.05s;
+      }
+      .card:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      .card:nth-child(3) {
+        animation-delay: 0.15s;
+      }
+      .card:nth-child(4) {
+        animation-delay: 0.2s;
+      }
+      .card:nth-child(5) {
+        animation-delay: 0.25s;
+      }
+      .card:nth-child(6) {
+        animation-delay: 0.3s;
+      }
+      .card:nth-child(7) {
+        animation-delay: 0.35s;
+      }
+      .card:nth-child(8) {
+        animation-delay: 0.4s;
+      }
+      .card:nth-child(9) {
+        animation-delay: 0.45s;
+      }
+
+      @media (max-width: 600px) {
+        .card {
+          padding: 20px 18px;
+        }
+        .hero {
+          padding: 56px 20px 36px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a href="#" class="logo">
+          <span class="logo-name">Cardtastic</span>
+        </a>
+        <button
+          class="theme-toggle"
+          id="themeBtn"
+          onclick="toggleTheme()"
+          aria-label="Toggle theme"
+        >
+          <span id="themeIcon">☀️</span>
+          <span id="themeLabel">Light</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-badge">📄 Legal</div>
+      <h1>Privacy <span>Policy</span></h1>
+      <p class="hero-date">Last updated: August 11, 2026</p>
+    </section>
+
+    <main>
+      <!-- Intro card -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Introduction</h2>
+        </div>
+        <p>
+          Welcome to <strong>Cardtastic</strong>, a vocabulary learning app
+          developed by Maximilian Pilartz. This Privacy Policy explains how we
+          handle your data.
+        </p>
+        <div class="highlight">
+          <strong>Privacy-first by design:</strong> Cardtastic stores all your
+          data locally on your device. We have no servers, no user accounts, and
+          no tracking. The vast majority of your data never leaves your device.
+        </div>
+      </div>
+
+      <!-- Local data -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Data Stored on Your Device</h2>
+        </div>
+        <p>
+          All of the following data is created by you and stored
+          <strong>exclusively on your device</strong> in a local database:
+        </p>
+        <ul>
+          <li>Vocabulary cards (words, translations, example sentences)</li>
+          <li>Flashcard decks and their language settings</li>
+          <li>
+            Learning progress and statistics (phases, streaks, review dates)
+          </li>
+          <li>Custom chat scenarios and AI conversation history</li>
+          <li>App preferences (language, theme, notification settings)</li>
+        </ul>
+        <div class="highlight">
+          <strong>We have no access to this data.</strong> It is never
+          transmitted to our servers.
+        </div>
+      </div>
+
+      <!-- Cloud sync -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Optional Cloud Sync</h2>
+        </div>
+        <p>
+          If you choose to enable cloud backup, your local database file can be
+          synced to a third-party provider of your choice:
+        </p>
+        <ul>
+          <li>
+            <strong>Google Drive</strong> –
+            <a
+              href="https://policies.google.com/privacy"
+              target="_blank"
+              rel="noopener"
+              >Google Privacy Policy</a
+            >
+          </li>
+          <li>
+            <strong>Microsoft OneDrive</strong> –
+            <a
+              href="https://privacy.microsoft.com"
+              target="_blank"
+              rel="noopener"
+              >Microsoft Privacy Policy</a
+            >
+          </li>
+          <li>
+            <strong>Apple iCloud</strong> –
+            <a
+              href="https://www.apple.com/legal/privacy/"
+              target="_blank"
+              rel="noopener"
+              >Apple Privacy Policy</a
+            >
+          </li>
+          <li><strong>WebDAV</strong> – your own server</li>
+        </ul>
+        <p>
+          We do not act as an intermediary and have no access to your synced
+          data. Authentication tokens for cloud services are stored securely in
+          the iOS Keychain on your device and are never shared with us.
+        </p>
+      </div>
+
+      <!-- Permissions -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Device Permissions</h2>
+        </div>
+        <p>The app may request the following permissions. All are optional.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Permission</th>
+                <th>Purpose</th>
+                <th>Optional?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Microphone</td>
+                <td>Voice input for AI conversation mode</td>
+                <td><span class="badge-yes">Yes</span></td>
+              </tr>
+              <tr>
+                <td>Speech Recognition</td>
+                <td>Transcribing spoken answers in chat</td>
+                <td><span class="badge-yes">Yes</span></td>
+              </tr>
+              <tr>
+                <td>Camera</td>
+                <td>Scanning text from books via OCR</td>
+                <td><span class="badge-yes">Yes</span></td>
+              </tr>
+              <tr>
+                <td>Photo Library</td>
+                <td>Importing images for text recognition</td>
+                <td><span class="badge-yes">Yes</span></td>
+              </tr>
+              <tr>
+                <td>Notifications</td>
+                <td>Learning reminders and streak alerts</td>
+                <td><span class="badge-yes">Yes</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top: 12px; font-size: 14px; color: var(--text-muted)">
+          You can revoke any permission at any time in iOS Settings. Denying a
+          permission only disables that specific feature.
+        </p>
+      </div>
+
+      <!-- AI -->
+      <div class="card">
+        <div class="card-header">
+          <h2>On-Device AI</h2>
+        </div>
+        <p>
+          Cardtastic offers an optional AI feature powered by an open-source
+          language model (Gemma 2B) that runs
+          <strong>entirely on your device</strong>.
+        </p>
+        <ul>
+          <li>No data is sent to external AI services or the cloud.</li>
+          <li>
+            All translations, suggestions, and AI conversations are processed
+            locally.
+          </li>
+          <li>
+            The AI model (~1.2 GB) is downloaded directly to your device and
+            stored locally.
+          </li>
+        </ul>
+      </div>
+
+      <!-- No tracking -->
+      <div class="card">
+        <div class="card-header">
+          <h2>What We Do NOT Collect</h2>
+        </div>
+        <ul>
+          <li>Personal identification information (name, email, address)</li>
+          <li>Device identifiers or advertising IDs (IDFA)</li>
+          <li>Usage analytics, session data, or crash reports</li>
+          <li>Location data</li>
+          <li>Any data through third-party analytics or tracking SDKs</li>
+        </ul>
+      </div>
+
+      <!-- Deletion -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Data Deletion</h2>
+        </div>
+        <p>
+          You are in full control of your data. You can delete it at any time
+          by:
+        </p>
+        <ul>
+          <li>Removing individual cards or decks within the app</li>
+          <li>Using "Delete All Data" in the app's settings</li>
+          <li>Uninstalling the app (removes all local data immediately)</li>
+        </ul>
+        <p>
+          If you used cloud sync, please also delete the backup file directly
+          from your cloud storage provider.
+        </p>
+      </div>
+
+      <!-- Children -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Children's Privacy</h2>
+        </div>
+        <p>
+          Cardtastic does not knowingly collect personal information from
+          children under 13. The app does not require account creation or
+          submission of any personal data. If you are a parent or guardian with
+          concerns, please contact us.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <p>
+          © <span id="footer-year"></span> Maximilian Pilartz. All rights
+          reserved.
+        </p>
+        <p>Cardtastic · Bundle ID: com.soposy.cardtastic</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement;
+        const isDark = html.getAttribute("data-theme") === "dark";
+        html.setAttribute("data-theme", isDark ? "light" : "dark");
+        document.getElementById("themeIcon").textContent = isDark ? "🌙" : "☀️";
+        document.getElementById("themeLabel").textContent = isDark
+          ? "Dark"
+          : "Light";
+        localStorage.setItem("ct-theme", isDark ? "light" : "dark");
+      }
+
+      document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+
+      // Restore saved theme
+      const saved = localStorage.getItem("ct-theme");
+      if (saved) {
+        document.documentElement.setAttribute("data-theme", saved);
+        if (saved === "light") {
+          document.getElementById("themeIcon").textContent = "🌙";
+          document.getElementById("themeLabel").textContent = "Dark";
+        }
+      }
+
+      // Auto detect system theme on first visit
+      if (
+        !saved &&
+        window.matchMedia("(prefers-color-scheme: light)").matches
+      ) {
+        document.documentElement.setAttribute("data-theme", "light");
+        document.getElementById("themeIcon").textContent = "🌙";
+        document.getElementById("themeLabel").textContent = "Dark";
+      }
+    </script>
+  </body>
 </html>
